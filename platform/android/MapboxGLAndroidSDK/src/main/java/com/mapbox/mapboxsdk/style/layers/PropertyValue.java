@@ -58,10 +58,10 @@ public class PropertyValue<T> {
   }
 
   @Nullable
-  public Function<?, T> getFunction() {
+  public Function<T> getFunction() {
     if (isFunction()) {
       // noinspection unchecked
-      return (Function<?, T>) value;
+      return (Function<T>) value;
     } else {
       Timber.w("not a function, try value");
       return null;
